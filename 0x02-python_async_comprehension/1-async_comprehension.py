@@ -2,14 +2,12 @@
 ''' Asynchronous Python '''
 import random
 import asyncio
-from typing import Generator
+from typing import List
 
 
-async_comprehension = __import__('0-async_generator').async_generator
+async_generator = __import__('0-async_generator').async_generator
 
 
-async def async_comprehension() -> Generator[float, None, None]:
-    '''yield a random number at 1sec interval'''
-    for _ in range(10):
-        await asyncio.sleep(1)
-        yield random.random() * 10
+async def async_comprehension() -> List[float]:
+    ''' make a list of 10 num from imported generator '''
+    return [num async for num in async_generator()]
