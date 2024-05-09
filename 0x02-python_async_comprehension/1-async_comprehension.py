@@ -2,9 +2,9 @@
 ''' Asynchronous Python '''
 import random
 import asyncio
-from typing import AsyncGenerator
+from typing import Generator
 
-async def async_comprehension() -> AsyncGenerator[float, None]:
+async def async_comprehension() -> Generator[float, None, None]:
     '''yield a random number at 1sec interval'''
     for _ in range(10):
         await asyncio.sleep(1)
