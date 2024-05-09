@@ -3,6 +3,8 @@
 import random
 import asyncio
 from typing import Generator
+async_comprehension = __import__('0-async_generator').async_comprehension
+
 
 async def async_comprehension() -> Generator[float, None, None]:
     '''yield a random number at 1sec interval'''
