@@ -58,8 +58,6 @@ Tasks
     Familiarize yourself with the client.GithubOrgClient class.
     In a new test_client.py file, declare the TestGithubOrgClient(unittest.TestCase) class and implement the test_org method.
     This method should test that GithubOrgClient.org returns the correct value.
-    Use @patch as a decorator to make sure get_json is called once with the expected argument but make sure it is not executed.
-    Use @parameterized.expand as a decorator to parametrize the test with a couple of org examples to pass to GithubOrgClient, in this order:
     •	File: test_client.py
 5. Mocking a property
     memoize turns methods into properties. Read up on how to mock a property (see resource).
